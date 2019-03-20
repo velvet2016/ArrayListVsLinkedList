@@ -8,33 +8,21 @@ public class CustomerService {
 
 
 	public List<Integer> fillArrayList(int cap){
-		ArrayList<Integer> list = new ArrayList<Integer>();
+		ArrayList<Integer> list = new ArrayList<>();
 		for (int i = 0; i < cap; i++) {
 			list.add(i);
 		}
 		return list;
 	}
-	public List<Integer> fillArrayListNoBoxing(int cap){
-		ArrayList<Integer> list = new ArrayList<Integer>();
-		for (int i = 0; i < cap; i++) {
-			list.add(new Integer(i));
-		}
-		return list;
-	}
+
 	public List<Integer> fillLinkedList(int cap){
-		List<Integer> list = new LinkedList<Integer>();
+		List<Integer> list = new LinkedList<>();
 		for (int i = 0; i < cap; i++) {
 			list.add(i);
 		}
 		return list;
 	}
-	public List fillLinkedListNoBoxing(int cap){
-		List<Integer> list = new LinkedList<Integer>();
-		for (int i = 0; i < cap; i++) {
-			list.add(new Integer(i));
-		}
-		return list;
-	}
+
 
 	public List<Integer> insertInHead(int cap, List<Integer> list){
 		for (int i = 0; i < cap; i++) {
