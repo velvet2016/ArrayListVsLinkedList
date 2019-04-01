@@ -11,16 +11,16 @@ public class App {
 	public static void main(String[] args) {
 		ApplicationContext appContext = new ClassPathXmlApplicationContext(new String[] { "Spring-Customer.xml" });
 
-		CustomerService cust = (CustomerService) appContext.getBean("customerServiceProxy");
+		CustomerService serv = (CustomerService) appContext.getBean("customerServiceProxy");
 
 		int initCapacity =   100000;
 		int insertCapacity = 100000;
-		List<Integer> arraylist = cust.fillArrayList(initCapacity);
-		List<Integer> linkedList = cust.fillLinkedList(initCapacity);
-		cust.insertInHead(insertCapacity,arraylist);
-		cust.insertInHead(insertCapacity,linkedList);
-		cust.insertInTail(insertCapacity,arraylist);
-		cust.insertInTail(insertCapacity,linkedList);
+		List<Integer> arraylist = serv.fillArrayList(initCapacity);
+		List<Integer> linkedList = serv.fillLinkedList(initCapacity);
+		serv.insertInHead(insertCapacity,arraylist);
+		serv.insertInHead(insertCapacity,linkedList);
+		serv.insertInTail(insertCapacity,arraylist);
+		serv.insertInTail(insertCapacity,linkedList);
 
 
 	}
